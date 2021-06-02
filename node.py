@@ -44,7 +44,7 @@ class Node:
             self.node_value=self.node.get_value()
         except:
             self.node_value=None
-        return self.node_value
+        print(self.node_value)
 
     def write_value_only(self, value, type=None):
         """Schreibe den Wert einer Node ohne Timestamp"""
