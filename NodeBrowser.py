@@ -8,7 +8,7 @@
 # in an OPC UA Server
 #
 ######################################################################
-
+import signal
 from node import *
 from opcua import Client
 import sys
@@ -46,6 +46,7 @@ except:
     sys.exit(-1)
 
 
+signal.alarm(4) 
 starting_points={1:client.get_objects_node, 2:client.get_root_node}
 print("Connected to OPC UA server!")
 base = Node(starting_points[start](), None)
